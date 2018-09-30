@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Chiflete</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">NombreUser</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">configuración</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- String related to Maps -->
+    <string name="title_activity_maps">Map</string>
+
+    <!-- String related to form_user -->
+    <string name="title_activity_form_user">form_user</string>
+    <string name="nameUser">Nombre</string>
+    <string name="emailUser">Email</string>
+    <string name="passwordUser">Contraseña</string>
+    <string name="localidad">Localidad</string>
+    <string name="calle">Calle</string>
+    <string name="altura">Altura</string>
+    <string name="provincia">Provincia</string>
+    <string name="submint_form">Guardar</string>
+</resources>
