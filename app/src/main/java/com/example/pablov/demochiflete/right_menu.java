@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 public class right_menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -20,6 +22,11 @@ public class right_menu extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Configuration Realm data base
+        Realm.init(this);
+        RealmConfiguration config = new RealmConfiguration.Builder().build();
+        Realm.setDefaultConfiguration(config);
         setContentView(R.layout.activity_right_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -98,7 +105,7 @@ public class right_menu extends AppCompatActivity
         } else if (id == R.id.map_base) {
             startActivity(new Intent(right_menu.this, MapsActivity.class));
         } else if (id == R.id.form_pres_serv) {
-
+            startActivity(new Intent(right_menu.this, LoginActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -25,7 +25,7 @@
     <string name="title_activity_maps">Map</string>
 
     <!-- String related to form_user -->
-    <string name="title_activity_form_user">form_user</string>
+    <string name="title_activity_form_user">Registrarse</string>
     <string name="nameUser">Nombre</string>
     <string name="emailUser">Email</string>
     <string name="passwordUser">Contraseña</string>
