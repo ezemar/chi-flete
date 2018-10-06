@@ -98,7 +98,7 @@ public class right_menu extends AppCompatActivity
         } else if (id == R.id.map_base) {
             startActivity(new Intent(right_menu.this, MapsActivity.class));
         } else if (id == R.id.form_pres_serv) {
-
+            startActivity(new Intent(right_menu.this, LoginActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
