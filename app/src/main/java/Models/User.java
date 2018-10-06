@@ -3,8 +3,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 public class User extends RealmObject {
-    @PrimaryKey
-    private long id;
+
     private String nombre;
     private String apellido;
     private Email email;
@@ -33,7 +32,7 @@ public class User extends RealmObject {
         return codigo_verificacion;
     }
 
-    public Direccion detDireccionUser() {
+    public Direccion getDireccionUser() {
         return direccionUser;
     }
 

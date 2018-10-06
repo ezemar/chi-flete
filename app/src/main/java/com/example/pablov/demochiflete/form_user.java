@@ -1,22 +1,23 @@
 package com.example.pablov.demochiflete;
 
+import android.app.Activity;
+import android.app.PendingIntent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import Models.User;
+import Models.Email;
+import Models.Direccion;
 import io.realm.Realm;
-import io.realm.RealmConfiguration;
 
 
 public class form_user extends AppCompatActivity {
 
-    EditText nombre;
+    EditText nombre, email, calle, localidad, provincia, altura;
     Button guardar;
     private Realm modelRealm;
 
@@ -27,8 +28,13 @@ public class form_user extends AppCompatActivity {
         setContentView(R.layout.activity_form_user);
         modelRealm = Realm.getDefaultInstance();
 
-
+        // Save Data form registers users
         nombre = (EditText)findViewById(R.id.txtUserName);
+        email = (EditText)findViewById(R.id.txtEmail);
+        calle = (EditText)findViewById(R.id.txtCalle);
+        altura = (EditText)findViewById(R.id.txtAltura);
+        localidad = (EditText)findViewById(R.id.txtLocalidad);
+        provincia = (EditText)findViewById(R.id.txtProvincia);
 
         guardar = (Button)findViewById(R.id.btnRegister);
         guardar.setOnClickListener(new View.OnClickListener() {
@@ -39,11 +45,29 @@ public class form_user extends AppCompatActivity {
                     public void execute(Realm realm) {
                         User userRegister = modelRealm.createObject(User.class);
                         userRegister.setNombre(nombre.getText().toString());
-                    }
-                });
 
+                        // Set email model
+                        Email emailUser = modelRealm.createObject(Email.class);
+                        emailUser.setEmail(email.getText().toString());
+                        emailUser.setActive(false);
+                        userRegister.setEmail(emailUser);
+
+                        // set direccion model
+                        Direccion dirUser = modelRealm.createObject(Direccion.class);
+                        dirUser.setCalle(calle.getText().toString());
+                        dirUser.setLocalidad(localidad.getText().toString());
+                        dirUser.setNumero(Integer.valueOf(altura.getText().toString()));
+                        dirUser.setProvincia(provincia.getText().toString());
+                        userRegister.setDireccionUser(dirUser);
+                    }
+
+                });
             }
         });
     }
 
+    @Override
+    public void finish() {
+        super.finish();
+    }
 }

@@ -3,7 +3,7 @@ import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
 
 public class Vehiculo extends RealmObject {
-    @PrimaryKey
+
     public String idVehiculo;
     public User userId;
     public String marca;
