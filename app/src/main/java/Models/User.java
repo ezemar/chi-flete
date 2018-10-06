@@ -46,7 +46,7 @@ public class User extends RealmObject {
         this.apellido = apellido;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(Email email) {
         this.email = email;
     }
 
@@ -62,6 +62,4 @@ public class User extends RealmObject {
         this.direccionUser = direccionUser;
     }
 
-    public void setDireccionUser(String s, String s1, String s2, String s3) {
-    }
 }
