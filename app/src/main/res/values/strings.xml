@@ -23,6 +23,7 @@
 
     <!-- String related to Maps -->
     <string name="title_activity_maps">Map</string>
+    <string name="google_maps_key">AIzaSyCveJl7w2WnkFec2YM9Ja_KfOFTmrrPte4</string>
 
     <!-- String related to form_user -->
     <string name="title_activity_form_user">Registrarse</string>

@@ -39,7 +39,7 @@ public class form_user extends AppCompatActivity {
         guardar = (Button)findViewById(R.id.btnRegister);
         guardar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 modelRealm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
@@ -58,6 +58,8 @@ public class form_user extends AppCompatActivity {
                         dirUser.setLocalidad(localidad.getText().toString());
                         dirUser.setNumero(Integer.valueOf(altura.getText().toString()));
                         dirUser.setProvincia(provincia.getText().toString());
+                        dirUser.setLatitud(Long.valueOf("-34.7602944"));
+                        dirUser.setLongitud(Long.valueOf("-58.4127995"));
                         userRegister.setDireccionUser(dirUser);
                     }
 
