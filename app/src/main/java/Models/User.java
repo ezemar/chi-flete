@@ -61,4 +61,5 @@ public class User extends RealmObject {
     public void setDireccionUser(Direccion direccionUser) {
         this.direccionUser = direccionUser;
     }
+
 }

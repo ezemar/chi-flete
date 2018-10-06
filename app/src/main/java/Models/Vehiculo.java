@@ -4,6 +4,7 @@ import io.realm.annotations.PrimaryKey;
 
 public class Vehiculo extends RealmObject {
     @PrimaryKey
+    public String idVehiculo;
     public User userId;
     public String marca;
     public String modelo;
@@ -12,6 +13,10 @@ public class Vehiculo extends RealmObject {
 
 
     // GETTERS MODEL VEHICULO
+    public String getIdVehiculo() {
+        return idVehiculo;
+    }
+
     public User getUserId() {
         return userId;
     }
@@ -33,6 +38,10 @@ public class Vehiculo extends RealmObject {
     }
 
     // SETTERS MODEL VEHICULO
+    public void setIdVehiculo(String idVehiculo) {
+        this.idVehiculo = idVehiculo;
+    }
+
     public void setUserId(User userId) {
         this.userId = userId;
     }
