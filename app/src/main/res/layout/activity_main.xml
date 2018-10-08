@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flte"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/menuFlotante"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu_backgroundColor="@color/backgroundMenu"
+            app:menu_fab_label="Añadir Redes Sociales">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="facebookIntent"
+                android:src="@drawable/ic_facebook"
+                app:fab_colorNormal="@color/facebookColor"
+                app:fab_label="Facebook">
+
+            </com.github.clans.fab.FloatingActionButton>
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="twitterIntent"
+                android:src="@drawable/ic_twitter"
+                app:fab_colorNormal="@color/twitterColor"
+                app:fab_label="Twitter">
+
+            </com.github.clans.fab.FloatingActionButton>
+
+            <com.github.clans.fab.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="instagramIntent"
+                android:src="@drawable/ic_instagram"
+                app:fab_colorNormal="@color/instagramColor"
+                app:fab_label="Instagram">
+
+            </com.github.clans.fab.FloatingActionButton>
+
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
